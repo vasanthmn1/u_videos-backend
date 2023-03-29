@@ -11,7 +11,6 @@ const videochema = mongoose.Schema({
     },
     desc: {
         type: String,
-        required: true,
     },
     imgUrl: {
         type: String,
