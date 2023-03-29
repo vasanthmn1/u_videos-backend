@@ -1,7 +1,7 @@
 
 const express = require('express')
 // const { text } = require('../controllers/userctrl')
-const { getVideo, updateVideo, editVideo, deleteVideo, addVideo, random, sub, trend, search, getBytag } = require('../controller/videoCtrl')
+const { getVideo, updateVideo, editVideo, deleteVideo, addVideo, random, sub, trend, search, getBytag, addView } = require('../controller/videoCtrl')
 const verifyToken = require('../utils/verfieyToken')
 
 const router = express.Router()
@@ -12,6 +12,8 @@ router.post('/add', verifyToken, addVideo)
 
 router.delete('/:id', verifyToken, deleteVideo)
 router.get('/rendom', random)
+router.put('/addview', addView)
+
 router.get('/sub', verifyToken, sub)
 // router.delete('/:id', trend)
 router.delete('/:id', deleteVideo)
