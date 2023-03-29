@@ -12,7 +12,7 @@ router.post('/add', verifyToken, addVideo)
 
 router.delete('/:id', verifyToken, deleteVideo)
 router.get('/rendom', random)
-router.put('/addview', addView)
+router.put('/addview/:id', addView)
 
 router.get('/sub', verifyToken, sub)
 // router.delete('/:id', trend)
