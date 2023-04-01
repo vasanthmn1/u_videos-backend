@@ -13,7 +13,7 @@ const commentsRoutes = require('./routes/commentsRoutes')
 const port = process.env.PORT || 8000
 conntingMongo()
 const app = express()
-app.use(cors())
+app.use(cors({ origin: "*" }))
 app.use(express.json())
 app.use(cookieparser())
 app.use('/auth', authroutes)
